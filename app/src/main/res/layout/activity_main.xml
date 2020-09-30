@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C5B4B4"
+        tools:context=".MainActivity"
+        tools:ignore="UnknownId">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/menuicon"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/menu" />
+
+            <ImageView
+                android:id="@+id/searchicon"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/search" />
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="370dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ca"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="370dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ca"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="140dp"
+                android:text="Camera"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="170dp"
+                android:text="New Product from Leica brand"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginRight="-30dp"
+            android:background="@drawable/search_product"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/card1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="30dp"
+                android:text="BROWSE BY"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBrand"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="270dp"
+                android:background="#FF5722"
+                android:text="Brand"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtLatedArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Latest Arrivals"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear2" />
+
+        <Button
+            android:id="@+id/btnviewall"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="#FF5722"
+            android:text="View All"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear2" />
+
+        <fragment
+            android:id="@+id/fragmentContainer"
+            android:name="com.ydnm4528.recfragment.fragment.HomeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnviewall" />
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/search_product"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentContainer">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="10dp"
+                android:text="CAN'T FIND WHAT YOU LOOKING FOR ?"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:text="SEARCH BY"
+                android:textColor="#191818"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="200dp"
+                android:background="#FF5722"
+                android:text="Upload picture"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose by Country"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear3" />
+
+        <fragment
+            android:id="@+id/fragmentContainer1"
+            android:name="com.ydnm4528.recfragment.fragment.CountryFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/customer"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentContainer1">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="10dp"
+                android:text="Need Help ?"
+                android:textColor="#131313"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:text="CUSTOMER SERVICE"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="200dp"
+                android:background="#FF5722"
+                android:drawableRight="@drawable/call"
+                android:text="Call Now"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtPopuarProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Popular Products"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear4" />
+
+        <!--    <fragment-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:id="@+id/fragmentContainer3"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/txtCountry"-->
+        <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--        android:name="com.ydnm4528.recfragment.fragment.PopularFragment"/>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

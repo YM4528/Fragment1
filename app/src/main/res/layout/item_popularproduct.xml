@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="5dp"
+        android:background="#FFFFFF">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txtnew"
+        android:paddingLeft="15dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:textSize="8dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/txtoff"
+        android:paddingLeft="12dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        android:textSize="8dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toRightOf="@id/txtnew"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtnameProduct"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/txtnew"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtbrandProduct"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@id/txtnameProduct"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <RatingBar
+        app:layout_goneMarginLeft="10dp"
+        android:id="@+id/rating_bar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:numStars="5"
+        android:rating="4"
+        android:stepSize="1"
+        app:layout_constraintTop_toBottomOf="@id/txtbrandProduct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <view
+        android:layout_marginTop="10dp"
+        android:id="@+id/view1"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/txtPriceProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"
+        android:textColor="#FF5722"
+        android:layout_marginLeft="10dp"
+       />
+
+    <ImageView
+        android:id="@+id/imagePopular"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txtnameProduct"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</ScrollView>
